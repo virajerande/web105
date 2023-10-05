@@ -1,185 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Website clone - Easy Tutorials</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Content Management Tool</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-    <div class="header">
-        <nav>
-            <img src="logo.png" class="logo">
-            <div>
-                <button class="language-btn">English <img src="down-icon.png"></button>
-                <button>sing in</button>
-            </div>
-        </nav>
-        <div class="headar-content">
-           <h1>Unlimited movies, TV shows and more.</h1>
-           <h3>watch anywhere. Cancel anytime.</h3>
-           <p>Ready to watch? Enter your email to create or restart your membership</p> 
-           <form class="email-signup">
-            <input type="email" placeholder="Email address" required>
-            <button type="submit">Get Started</button>
-           </form>
+    <div id="container">
+        <h1><u>Content Management Tool</u></h1>
+        <div id="addForm">
+            <h2>Add Article</h2>
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" id="title" required><br><br>
+                <label for="content">Content:</label><br>
+                <textarea id="content" required></textarea><br><br>
+                <div class="options">
+                    <button id="addImage">Add Image</button>
+                    <button id="addVideo">Add Video</button>
+                    <button id="addImageUrl">Add Image by URL</button>
+                    <button id="addVideoUrl">Add Video by URL</button>
+                </div>
+                <div class="btn-container">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+        <div id="articleTable">
+            <h2>Articles</h2>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+            <div id="articleContent"></div>
         </div>
     </div>
-    
-    <div class="features">
-        <div class="row">
-            <div class="text-col">
-                <h2>Enjoy on your TV.</h2>
-                <p>watch on smart TVs, playstation, xbox, chromecast,Apple TV, Blu-ray
-                    players and more.</p>
-                
-            </div>
-            <div class="img-col">
-               <img src="feature-1.png"> 
-            </div>
-        </div>
-        <div class="row">
-            <div class="img-col">
-                <img src="feature-2.png"> 
-             </div>
-            <div class="text-col">
-                <h2>Download your shows to watch offline.</h2>
-                <p>save your favourites easily and always have something to watch</p>
-                
-            </div>
-            
-        </div>
-        <div class="row">
-            <div class="text-col">
-                <h2>Watch everywhere</h2>
-                <p>stream unlimited movies and TV shows on your phone,tablet laptop,and TV.</p>
-                
-            </div>
-            <div class="img-col">
-               <img src="feature-3.png"> 
-            </div>
-        </div>
-        <div class="row">
-            <div class="img-col">
-                <img src="feature-4.png"> 
-             </div>
-            <div class="text-col">
-                <h2>Create profiles for children</h2>
-                <p>send children on adventures their favourite characters in a space made just for them free with your membership.</p>
-                
-            </div>
-            
-        </div>
-    </div>
-
-    <div class="faq">
-        <h2>Frequency asked Questions</h2>
-        <ul class="accordion">
-            <li>
-                <input type="radio" name="accordion" id="first">
-                <label for="first">What is Netflix?</label>
-                <div class="content">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cum culpa tempore odio quisquam minima
-                         fugiat impedit accusantium, expedita sapiente odit, ducimus dolorem iusto vitae dicta quia dolor perferendis
-                          itaque architecto repellendus! Eius maxime commodi veritatis aperiam mollitia neque minus placeat! Culpa, assumenda a? 
-                          Incidunt doloribus excepturi dicta! Soluta, quasi.</p>
-                          
-                </div>
-            </li>
-            <li>
-                <input type="radio" name="accordion" id="second">
-                <label for="second">How much does Netflix cost?</label>
-                <div class="content">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cum culpa tempore odio quisquam minima
-                         fugiat impedit accusantium, expedita sapiente odit, ducimus dolorem iusto vitae dicta quia dolor perferendis
-                          itaque architecto repellendus! Eius maxime commodi veritatis aperiam mollitia neque minus placeat! Culpa, assumenda a? 
-                          Incidunt doloribus excepturi dicta! Soluta, quasi.</p>
-                          
-                </div>
-            </li>
-            <li>
-                <input type="radio" name="accordion" id="third">
-                <label for="third">Where can I watch?</label>
-                <div class="content">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cum culpa tempore odio quisquam minima
-                         fugiat impedit accusantium, expedita sapiente odit, ducimus dolorem iusto vitae dicta quia dolor perferendis
-                          itaque architecto repellendus! Eius maxime commodi veritatis aperiam mollitia neque minus placeat! Culpa, assumenda a? 
-                          Incidunt doloribus excepturi dicta! Soluta, quasi.</p>
-                          
-                </div>
-            </li>
-            <li>
-                <input type="radio" name="accordion" id="fourth">
-                <label for="fourth">How do I cancel?</label>
-                <div class="content">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cum culpa tempore odio quisquam minima
-                         fugiat impedit accusantium, expedita sapiente odit, ducimus dolorem iusto vitae dicta quia dolor perferendis
-                          itaque architecto repellendus! Eius maxime commodi veritatis aperiam mollitia neque minus placeat! Culpa, assumenda a? 
-                          Incidunt doloribus excepturi dicta! Soluta, quasi.</p>
-                          
-                </div>
-            </li>
-            <li>
-                <input type="radio" name="accordion" id="fifth">
-                <label for="fifth">What can I watch on Netflix?</label>
-                <div class="content">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cum culpa tempore odio quisquam minima
-                         fugiat impedit accusantium, expedita sapiente odit, ducimus dolorem iusto vitae dicta quia dolor perferendis
-                          itaque architecto repellendus! Eius maxime commodi veritatis aperiam mollitia neque minus placeat! Culpa, assumenda a? 
-                          Incidunt doloribus excepturi dicta! Soluta, quasi.</p>
-                          
-                </div>
-            </li>
-            <li>
-                <input type="radio" name="accordion" id="sixth">
-                <label for="sixth">Is Netflix good for kids?</label>
-                <div class="content">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cum culpa tempore odio quisquam minima
-                         fugiat impedit accusantium, expedita sapiente odit, ducimus dolorem iusto vitae dicta quia dolor perferendis
-                          itaque architecto repellendus! Eius maxime commodi veritatis aperiam mollitia neque minus placeat! Culpa, assumenda a? 
-                          Incidunt doloribus excepturi dicta! Soluta, quasi.</p>
-                          
-                </div>
-            </li>
-
-        </ul>
-        <small>Ready to watch? Enter your email to create or restart your membership.</small>
-        <form class="email-signup">
-            <input type="email" placeholder="Email address" required>
-            <button type="submit">Get Started</button>
-           </form>
-    </div>
-
-    <div class="footer">
-        <h2>Questions? call 000-000-000-000</h2>
-
-        <div class="row">
-            <div class="col">
-                <a href="#">FAQ</a>
-                <a href="#">Investor Relations</a>
-                <a href="#">Privacy</a>
-                <a href="#">Speed Test</a>
-            </div>
-            <div class="col">
-                <a href="#">Help Center</a>
-                <a href="#">Jobs</a>
-                <a href="#">Cookies Preference</a>
-                <a href="#">Legel Notices</a>
-            </div>
-            <div class="col">
-                <a href="#">Account</a>
-                <a href="#">Ways to watch</a>
-                <a href="#">Corporate Information</a>
-                <a href="#">Only on Netflix</a>
-            </div>
-            <div class="col">
-                <a href="#">Media Center</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Contact Us</a>
-            </div>
-        </div>
-        <button class="language-btn">English <img src="down-icon.png"></button>
-        <p class="copyright-txt">Netflix India</p>
-    </div>
+    <script src="main.js"></script>
 </body>
+
 </html>
